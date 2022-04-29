@@ -6,11 +6,9 @@
 
         </div>
         <div class="card-body">
-            <button class="btn btn-primary mb-3">
-                <a href="{{ url('add-categories') }}">
+                <a href="{{ url('add-categories') }}" class="btn btn-primary">
                     Add Category
                 </a>
-            </button>
             <table class="table">
                 <thead>
                     <tr>
@@ -32,10 +30,14 @@
                                 <img style="width:50px" src="{{ asset('admin/assets/uploads/categories/'.$item->image) }}" alt="No Image Found">
                             </td>
                             <td>
-                                <a class="btn btn-primary">Edit</a>
+                                <a href="{{ url('edit-category/'.$item->id) }}" class="btn btn-primary">Edit</a>
                             </td>
                             <td>
-                                <a class="btn btn-danger">Delete</a>
+                                <form action="{{ url('delete-categories/'.$item->id) }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach

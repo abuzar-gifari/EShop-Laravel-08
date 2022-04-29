@@ -37,5 +37,8 @@ Route::middleware(['auth','isAdmin'])->group(function(){
     Route::get('/categories',[CategoryController::class, 'index']);
     Route::get('/add-categories',[CategoryController::class, 'AddCategory']);
     Route::post('/insert-categories',[CategoryController::class, 'InsertCategory']);
+    Route::get('/edit-category/{id}',[CategoryController::class, 'EditCategory']);
+    Route::put('/update-categories/{id}',[CategoryController::class, 'UpdateCategory']);
+    Route::delete('/delete-categories/{id}',[CategoryController::class, 'DeleteCategory']);
 });
 
