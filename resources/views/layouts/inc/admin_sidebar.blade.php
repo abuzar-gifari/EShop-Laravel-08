@@ -9,7 +9,7 @@
   <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link text-white active bg-gradient-primary" href="./pages/dashboard.html">
+        <a class="nav-link text-white active bg-gradient-primary" href="{{ url('dashboard') }}">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="material-icons opacity-10">dashboard</i>
           </div>
@@ -25,23 +25,28 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " href="./pages/profile.html">
+        <a class="nav-link text-white " href="{{ url('categories') }}">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-            <i class="material-icons opacity-10">person</i>
+            <i class="material-icons opacity-10"></i>
           </div>
-          <span class="nav-link-text ms-1">Profile</span>
+          <span class="nav-link-text ms-1">Categories</span>
         </a>
       </li>
+
       <li class="nav-item">
-        <a class="dropdown-item" href="{{ route('logout') }}" 
+        <a class="nav-link text-white " href="{{ route('logout') }}" 
         onclick="event.preventDefault();
                       document.getElementById('logout-form').submit();">
-            {{ __('Logout') }}
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="material-icons opacity-10"></i>
+          </div>
+          <span class="nav-link-text ms-1">{{ __('Logout') }}</span>
         </a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-            @csrf
+          @csrf
         </form>
       </li>
+
     </ul>
   </div>
 </aside>
