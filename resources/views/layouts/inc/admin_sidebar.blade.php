@@ -9,7 +9,7 @@
   <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link text-white active bg-gradient-primary" href="{{ url('dashboard') }}">
+        <a class="nav-link text-white {{ Request::is('dashboard') ? 'active':''; }}" href="{{ url('dashboard') }}">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             
           </div>
@@ -25,7 +25,7 @@
         </a>
       </li> --}}
       <li class="nav-item">
-        <a class="nav-link text-white " href="{{ url('categories') }}">
+        <a class="nav-link text-white {{ Request::is('categories') ? 'active':''; }}"  href="{{ url('categories') }}">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="material-icons opacity-10"></i>
           </div>
