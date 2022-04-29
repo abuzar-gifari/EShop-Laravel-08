@@ -14,6 +14,7 @@
                     <tr>
                         <th>Id</th>
                         <th>Product Name</th>
+                        <th>Category</th>
                         <th>Short Description</th>
                         <th>Selling Price</th>
                         <th>Image</th>
@@ -26,6 +27,7 @@
                         <tr>
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->name }}</td>
+                            <td>{{ $item->category->name }}</td>
                             <td>{{ $item->small_description }}</td>
                             <td>{{ $item->selling_price }}</td>
                             <td>
