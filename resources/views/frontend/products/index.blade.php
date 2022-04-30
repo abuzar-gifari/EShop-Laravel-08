@@ -14,12 +14,14 @@
                         @foreach ($products as $prod)
                             <div class="col-md-4 mb-3">
                                 <div class="card">
-                                    <img src="{{ asset('admin/assets/uploads/products/'.$prod->image) }}" alt="" srcset="">
-                                    <div class="card-body">
-                                        <h4>{{$prod->name}}</h4>
-                                        <span class="float-start">{{$prod->selling_price}}$</span>
-                                        <span class="float-end"><s>{{$prod->original_price}}$</s></span>
-                                    </div>
+                                    <a href="{{ url('category/'.$categories->name.'/'.$prod->name) }}">
+                                        <img style="width:200px;" src="{{ asset('admin/assets/uploads/products/'.$prod->image) }}" alt="" srcset="">
+                                        <div class="card-body">
+                                            <h4>{{$prod->name}}</h4>
+                                            <span class="float-start">{{$prod->selling_price}}$</span>
+                                            <span class="float-end"><s>{{$prod->original_price}}$</s></span>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         @endforeach

@@ -28,4 +28,9 @@ class FrontendController extends Controller
         return view('frontend.products.index',compact('categories','products'));
 
     }
+
+    public function SingleProductView($category_name,$product_name){
+        $products=Product::where('name',$product_name)->first();
+        return view('frontend.products.view-product',compact('products'));
+    }
 }
