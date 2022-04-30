@@ -23,6 +23,12 @@
   <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap5.css') }}">
   <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.min.css') }}">
   <link rel="stylesheet" href="{{ asset('frontend/css/owl.theme.default.min.css') }}">
+  <style>
+    a{
+      text-decoration: none !important;
+      color:black
+    }
+  </style>
 </head>
 
 
