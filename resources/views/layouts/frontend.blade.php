@@ -21,6 +21,8 @@
   <!-- CSS Files -->
   <link rel="stylesheet" href="{{ asset('frontend/css/custom.css') }}">
   <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap5.css') }}">
+  <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('frontend/css/owl.theme.default.min.css') }}">
 </head>
 
 
@@ -31,15 +33,16 @@
         @yield('content')
     </div>
 
-
     <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @if (session('msg'))
-    <script>
-      swal( "{{ session('msg') }}" );
-    </script>
-  @endif
+      <script>
+        swal( "{{ session('msg') }}" );
+      </script>
+    @endif
+    @yield('script')
 </body>
-
 </html>
 
