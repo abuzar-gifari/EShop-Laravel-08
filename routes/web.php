@@ -14,6 +14,7 @@ Auth::routes();
 // });
 
 Route::get('/',[FrontendFrontendController::class, 'index']);
+Route::get('/category',[FrontendFrontendController::class, 'category']);
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

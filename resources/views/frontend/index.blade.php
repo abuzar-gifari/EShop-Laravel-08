@@ -10,7 +10,8 @@
     <div class="py-5">
         <div class="container">
             <div class="row">
-                <div class="owl-carousel featured-carousel owl-theme">
+                <h3 class="text-center">Featured Products</h3>
+                <div class="owl-carousel featured-carousel owl-theme mt-3">
                     @foreach ($featured_products as $prod)
                         <div class="item">
                             <div class="card">
@@ -19,6 +20,23 @@
                                     <h4>{{$prod->name}}</h4>
                                     <span class="float-start">{{$prod->selling_price}}$</span>
                                     <span class="float-end"><s>{{$prod->original_price}}$</s></span>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h3 class="text-center mt-5">Trending Categories</h3>
+                <div class="owl-carousel featured-carousel owl-theme mt-3">
+                    @foreach ($trending as $trending)
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{ asset('admin/assets/uploads/categories/'.$trending->image) }}" alt="" srcset="">
+                                <div class="card-body">
+                                    <h4>{{$trending->name}}</h4>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +63,7 @@
                     items:3
                 },
                 1000:{
-                    items:5
+                    items:3
                 }
             }
         })
